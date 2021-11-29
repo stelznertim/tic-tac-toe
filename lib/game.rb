@@ -21,9 +21,9 @@ class Game
   def play_round(is_taken_number: false)
     puts 'Invalid Number. Choose another one next time.' if is_taken_number
     @current_player.turn_notification
-    @number = gets.chomp.to_i
-    if @board.cells[@number - 1] == @number
-      @board.update_board(@number,
+    number = gets.chomp.to_i
+    if @board.cells[number - 1] == number
+      @board.update_board(number,
                           @current_player.symbol)
     else
       play_round(is_taken_number: true)
