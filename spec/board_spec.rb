@@ -19,7 +19,7 @@ describe Board do
       expect(board.check_board).to be true
     end
 
-    it ' is not a winning combination' do
+    it 'is not a winning combination' do
       board.update_board(1, 'O')
       expect(board.check_board).not_to be true
     end
